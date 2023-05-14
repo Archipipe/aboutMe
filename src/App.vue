@@ -1,13 +1,15 @@
-<template><ContactNavBar /></template>
+<template><ContactNavBar /><MainProfile /></template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import ContactNavBar from "./components/ContactNavBar.vue";
+import MainProfile from "./components/MainProfile.vue";
 
 export default defineComponent({
   name: "App",
   components: {
     ContactNavBar,
+    MainProfile,
   },
 });
 </script>
