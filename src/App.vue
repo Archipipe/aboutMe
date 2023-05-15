@@ -1,15 +1,19 @@
-<template><ContactNavBar /><MainProfile /></template>
+<template><ContactNavBar /><MainProfile /><Introduction /></template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import ContactNavBar from "./components/ContactNavBar.vue";
 import MainProfile from "./components/MainProfile.vue";
+import TestComponent from "./components/TestComponent.vue";
+import Introduction from "./components/Introduction.vue";
 
 export default defineComponent({
   name: "App",
   components: {
     ContactNavBar,
     MainProfile,
+    Introduction,
+    TestComponent,
   },
 });
 </script>
@@ -27,5 +31,6 @@ export default defineComponent({
 
 body {
   font-family: "Montserrat", sans-serif;
+  color: $font_default;
 }
 </style>

@@ -50,6 +50,7 @@ header {
   flex-direction: column;
   align-items: flex-end;
   line-height: 0.8;
+  user-select: none;
   span:first-of-type {
     font-size: 24px;
   }
@@ -63,9 +64,10 @@ header {
   width: 40%;
   justify-content: space-between;
   button {
+    cursor: pointer;
     font-family: inherit;
     font-size: 18px;
-    color: $button_default;
+    color: $nav_default;
     background: none;
     border: none;
     transition: color 0.2s ease;
