@@ -33,4 +33,9 @@ body {
   font-family: "Montserrat", sans-serif;
   color: $font_default;
 }
+
+button {
+  font-family: "Montserrat", sans-serif;
+  color: $font_default;
+}
 </style>

@@ -57,6 +57,7 @@ header {
   span:last-of-type {
     font-weight: 500;
     font-size: 22px;
+    color: $intensive;
   }
 }
 .headerNav {
