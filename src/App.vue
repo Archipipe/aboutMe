@@ -1,4 +1,4 @@
-<template><ContactNavBar /><MainProfile /><Introduction /></template>
+<template><ContactNavBar /><MainProfile /><Introduction /><Whyme /></template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
@@ -6,6 +6,7 @@ import ContactNavBar from "./components/ContactNavBar.vue";
 import MainProfile from "./components/MainProfile.vue";
 import TestComponent from "./components/TestComponent.vue";
 import Introduction from "./components/Introduction.vue";
+import Whyme from "./components/Whyme.vue";
 
 export default defineComponent({
   name: "App",
@@ -13,6 +14,7 @@ export default defineComponent({
     ContactNavBar,
     MainProfile,
     Introduction,
+    Whyme,
     TestComponent,
   },
 });

@@ -92,6 +92,7 @@ header {
     display: inherit;
     align-items: center;
     gap: 5px;
+    color: $intensive;
 
     & > img {
       width: 20px;
