@@ -43,6 +43,7 @@ export default defineComponent({
   flex-direction: column;
   justify-content: center;
   padding: 0 20%;
+  margin-bottom: 10%;
 
   & > div:first-of-type {
     font-size: 30px;

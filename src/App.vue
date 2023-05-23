@@ -1,5 +1,5 @@
 <template>
-  <ContactNavBar /><MainProfile /><Introduction /><Whyme /><Advantages />
+  <ContactNavBar /><MainProfile /><Introduction /><Whyme /><Advantages /><Review />
 </template>
 
 <script lang="ts">
@@ -10,6 +10,7 @@ import TestComponent from "./components/TestComponent.vue";
 import Introduction from "./components/Introduction.vue";
 import Whyme from "./components/Whyme.vue";
 import Advantages from "./components/Advantages.vue";
+import Review from "./components/Reviews/Review.vue";
 
 export default defineComponent({
   name: "App",
@@ -20,6 +21,7 @@ export default defineComponent({
     Whyme,
     TestComponent,
     Advantages,
+    Review,
   },
 });
 </script>
