@@ -1,10 +1,12 @@
 <template>
-  <div class="Slide">
-    <div class="content">
-      <img :src="image" />
-      <span>{{ title }} {{ id }}</span>
+  <transition name="list">
+    <div class="Slide">
+      <div class="content">
+        <img :src="image" />
+        <span>{{ title }}</span>
+      </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script lang="ts">
@@ -18,12 +20,12 @@ export default defineComponent({
       required: true,
     },
     image: { type: String as PropType<string>, required: true },
-    id: Number as PropType<number>,
   },
 });
 </script>
 <style lang="scss" scoped>
 .Slide {
+  transition: transform 0.5s ease;
   position: relative;
   min-width: 21.25%;
   border-radius: 45px;

@@ -63,9 +63,8 @@ export default defineComponent({
 <style lang="scss" scoped>
 .Whyme {
   width: 100%;
-  height: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 10% 20%;
 }
 

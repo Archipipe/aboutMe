@@ -1,24 +1,33 @@
 <template>
-  <div class="Slider" :style="{ transform: `translateX(${sliderMove}%)` }">
-    <Slide
-      v-for="slide in SlideArray"
-      :title="slide.title"
-      :image="slide.image"
-      :key="slide.id"
-      :id="slide.id"
-    />
-  </div>
+  <swiper
+    @swiper="onSwiper"
+    :modules="modules"
+    :loop="true"
+    :slidesPerView="3"
+    :spaceBetween="30"
+    class="mySwiper"
+  >
+    <swiper-slide v-for="(slide, idx) in SlideArray"
+      ><Slide :title="slide.title" :image="slide.image" :key="idx"
+    /></swiper-slide>
+  </swiper>
   <div class="SliderButton">
-    <sliderLeft @click="moveSlider('left')" />
-    <sliderRight @click="moveSlider('right')" />
-    <button @click="shit()">Нажми</button>
+    <sliderLeft @click="slide('prev')" />
+    <sliderRight @click="slide('next')" />
   </div>
 </template>
 <script lang="ts" setup>
-import { defineProps, PropType, ref, reactive } from "vue";
-import Slide from "@/components/Reviews/CarouselSlide.vue";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/navigation";
 import sliderLeft from "./sliderLeft.vue";
 import sliderRight from "./sliderRight.vue";
+import { defineProps, PropType, ref, reactive } from "vue";
+import Slide from "@/components/Reviews/CarouselSlide.vue";
+
+import { Navigation } from "swiper";
+
+const modules = [Navigation];
 
 interface ISlide {
   title: string;
@@ -34,39 +43,23 @@ const props = defineProps({
 });
 
 let SlideArray = reactive(props.data);
-let sliderMove = ref(0);
-const moveSlider = (direction: "left" | "right"): void => {
-  const movePercentage = 26.25;
-  switch (direction) {
-    case "right":
-      sliderMove.value -= movePercentage;
-      //SlideArray.push(SlideArray[0]);
-
-      return;
-    case "left":
-      SlideArray.unshift(SlideArray[SlideArray.length - 1]);
-      SlideArray.unshift(SlideArray[SlideArray.length - 2]);
-      sliderMove.value += movePercentage;
-
-      //SlideArray.unshift(SlideArray.pop()!);
-      return;
-  }
+const swiperRef = ref();
+const onSwiper = (swiper: any) => {
+  swiperRef.value = swiper;
 };
-const shit = () => {
-  SlideArray.shift();
+
+const slide = (dir: "prev" | "next") => {
+  switch (dir) {
+    case "prev":
+      swiperRef.value.slidePrev();
+      return;
+    case "next":
+      swiperRef.value.slideNext();
+  }
 };
 </script>
 
-<style lang="scss" scoped>
-.Slider {
-  width: 100%;
-  margin-top: 5%;
-  display: flex;
-
-  gap: 0 5%;
-  transition: transform 0.5s ease;
-}
-
+<style lang="scss">
 .SliderButton {
   padding-top: 2%;
   margin: 0 auto;
