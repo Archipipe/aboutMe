@@ -27,7 +27,6 @@ export default defineComponent({
 .Slide {
   transition: transform 0.5s ease;
   position: relative;
-  min-width: 21.25%;
   border-radius: 45px;
   background-color: $main_color;
   &::after {

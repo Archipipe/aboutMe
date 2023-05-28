@@ -1,5 +1,5 @@
 <template>
-  <ContactNavBar /><MainProfile /><Introduction /><Whyme /><Advantages /><Review />
+  <ContactNavBar /><MainProfile /><Introduction /><Whyme /><Advantages /><Review /><SignUp />
 </template>
 
 <script lang="ts">
@@ -11,6 +11,7 @@ import Introduction from "./components/Introduction.vue";
 import Whyme from "./components/Whyme.vue";
 import Advantages from "./components/Advantages.vue";
 import Review from "./components/Reviews/Review.vue";
+import SignUp from "./components/SignUp/Signup.vue";
 
 export default defineComponent({
   name: "App",
@@ -22,6 +23,7 @@ export default defineComponent({
     TestComponent,
     Advantages,
     Review,
+    SignUp,
   },
 });
 </script>
@@ -37,12 +39,10 @@ export default defineComponent({
   padding: 0;
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
-  color: $font_default;
-}
-
-button {
+body,
+button,
+input,
+textarea {
   font-family: "Montserrat", sans-serif;
   color: $font_default;
 }

@@ -3,11 +3,11 @@
     @swiper="onSwiper"
     :modules="modules"
     :loop="true"
-    :slidesPerView="3"
+    :slidesPerView="4"
     :spaceBetween="30"
     class="mySwiper"
   >
-    <swiper-slide v-for="(slide, idx) in SlideArray"
+    <swiper-slide class="slideElement" v-for="(slide, idx) in SlideArray"
       ><Slide :title="slide.title" :image="slide.image" :key="idx"
     /></swiper-slide>
   </swiper>

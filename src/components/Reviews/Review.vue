@@ -58,6 +58,12 @@ export default defineComponent({
         title: "Я буквально отсосал этому человеку, советую",
         image: Image,
       },
+
+      {
+        title:
+          "Сперма на вкус как яичный белок Кто бы что ни говорил, а в анал — это ок Пусть так, пусть для вас это пустяк Когда я вижу мужика — у меня стояк",
+        image: Image,
+      },
     ]);
     return { Image, Slides };
   },
@@ -70,15 +76,18 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 20%;
+  margin-bottom: 10%;
   user-select: none;
   & > h2 {
     font-weight: 600;
     font-size: 30px;
+    margin-bottom: 2%;
   }
 }
 
 .carousel {
+  width: 100%;
+  align-self: center;
   overflow: hidden;
 }
 </style>
