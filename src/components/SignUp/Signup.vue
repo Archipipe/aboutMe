@@ -128,24 +128,18 @@ const sendEmail = async () => {
 }
 
 .inner {
-  height: 43vh;
   display: flex;
-  align-items: center;
-  padding: 0 10%;
-
+  padding: 4% 10%;
   background: linear-gradient(180deg, #abe2ff 0%, #e7f7ff 100%);
   border-radius: 30px;
 
   //Буковки
   & > div:first-of-type {
-    margin-bottom: 2%;
-    margin-right: 5%;
-    align-self: flex-end;
     width: 100%;
-    height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-end;
+    gap: 20%;
     & > div:first-of-type {
       h2 {
         font-weight: 600;

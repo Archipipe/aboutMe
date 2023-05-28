@@ -6,6 +6,7 @@
         <nav><vkIcon /> <telegramIcon /><skypeIcon /></nav>
       </div>
       <div class="mainProfileImage">
+        <img :src="myself" />
         <img :src="photoPlaceholder" />
       </div>
     </div>
@@ -18,12 +19,13 @@ import vkIcon from "@/components/SocialComponents/vkIcon.vue";
 import telegramIcon from "@/components/SocialComponents/telegramIcon.vue";
 import skypeIcon from "@/components/SocialComponents/skypeIcon.vue";
 import photoPlaceholder from "@/assets/SocialImages/photoPlaceholder.svg";
+import myself from "@/assets/SocialImages/Myself.png";
 
 export default defineComponent({
   name: "MainProfile",
   components: { vkIcon, telegramIcon, skypeIcon },
   setup() {
-    return { photoPlaceholder };
+    return { photoPlaceholder, myself };
   },
 });
 </script>
@@ -33,9 +35,8 @@ export default defineComponent({
   font-family: "Montserrat", sans-serif;
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 60vh;
+  align-items: flex-end;
+  margin-top: 2%;
   .mainProfileInner {
     width: 60%;
     margin: 0 auto;
@@ -46,6 +47,7 @@ export default defineComponent({
 }
 
 .mainProfileTitle {
+  flex-grow: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,6 +65,27 @@ export default defineComponent({
     display: flex;
     justify-content: center;
     gap: 20%;
+  }
+}
+
+.mainProfileImage {
+  flex-grow: 1;
+  position: relative;
+  img {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+    &:first-of-type {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-60%);
+      position: absolute;
+      margin: 0 auto;
+      width: 60%;
+      z-index: 2;
+    }
   }
 }
 </style>
