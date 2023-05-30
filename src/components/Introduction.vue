@@ -1,5 +1,5 @@
 <template>
-  <div class="introduction">
+  <div class="introduction" id="About">
     <div class="left">
       <div>
         <span>Привет, меня зовут</span>

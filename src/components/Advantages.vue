@@ -3,15 +3,15 @@
     <div>Ученики, которые смогли...</div>
     <div>
       <div>
-        <img :src="cool" />
+        <img :src="cool" v-motion-pop-visible-once />
         <span>Сдать ЕГЭ на высшем уровне</span>
       </div>
       <div>
-        <img :src="grad" />
+        <img :src="grad" v-motion-pop-visible-once />
         <span>Поступить в лучшие ВУЗы страны</span>
       </div>
       <div>
-        <img :src="bulb" />
+        <img :src="bulb" v-motion-pop-visible-once />
         <span>Получить навыки программирования</span>
       </div>
     </div>

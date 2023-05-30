@@ -5,7 +5,15 @@
         <div><span>Репетитор ЕГЭ/ОГЭ</span><span>по информатике</span></div>
         <nav><vkIcon /> <telegramIcon /><skypeIcon /></nav>
       </div>
-      <div class="mainProfileImage">
+      <div
+        class="mainProfileImage"
+        v-motion
+        :initial="{ opacity: 0, x: 400 }"
+        :enter="{
+          opacity: 1,
+          x: 0,
+        }"
+      >
         <img :src="myself" />
         <img :src="photoPlaceholder" />
       </div>

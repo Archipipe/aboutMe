@@ -1,5 +1,5 @@
 <template>
-  <div class="Reviews">
+  <div class="Reviews" id="Reviews">
     <h2>Отзывы</h2>
     <div class="carousel">
       <Slider :data="Slides" />

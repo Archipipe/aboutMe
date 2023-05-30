@@ -1,24 +1,63 @@
 <template>
-  <div class="Whyme">
+  <div class="Whyme" id="Whyme">
     <div class="left">
       <div>Почему тебе стоит выбрать меня?</div>
 
       <ol>
         <li>
           <span
+            v-motion
+            :initial="{ opacity: 0, x: -500, rotate: 90 }"
+            :visibleOnce="{
+              opacity: 1,
+              x: 0,
+              rotate: 0,
+              transition: {
+                type: 'spring',
+                stiffness: 200,
+                damping: 30,
+                mass: 0.3,
+              },
+            }"
             >1
             <div></div>
           </span>
-          <span> <div>Сдал ЕГЭ на 93 балла самостоятельно</div></span>
+          <span> <div>Сдал ЕГЭ на 95 баллов самостоятельно</div></span>
         </li>
         <li>
           <span
+            v-motion
+            :initial="{ opacity: 0, x: -500, rotate: 90 }"
+            :visibleOnce="{
+              opacity: 1,
+              x: 0,
+              rotate: 0,
+              transition: {
+                type: 'spring',
+                stiffness: 200,
+                damping: 30,
+                mass: 0.3,
+              },
+            }"
             >2
             <div></div></span
           ><span><div>Найду подход к любому ученику</div></span>
         </li>
         <li>
           <span
+            v-motion
+            :initial="{ opacity: 0, x: -500, rotate: 90 }"
+            :visibleOnce="{
+              opacity: 1,
+              x: 0,
+              rotate: 0,
+              transition: {
+                type: 'spring',
+                stiffness: 200,
+                damping: 30,
+                mass: 0.3,
+              },
+            }"
             >3
             <div></div></span
           ><span
@@ -29,6 +68,19 @@
         </li>
         <li>
           <span
+            v-motion
+            :initial="{ opacity: 0, x: -500, rotate: 90 }"
+            :visibleOnce="{
+              opacity: 1,
+              x: 0,
+              rotate: 0,
+              transition: {
+                type: 'spring',
+                stiffness: 200,
+                damping: 30,
+                mass: 0.3,
+              },
+            }"
             >4
             <div></div
           ></span>
@@ -42,7 +94,23 @@
       </ol>
     </div>
     <div class="right">
-      <img :src="WhymeImage" />
+      <img
+        :src="WhymeImage"
+        v-motion
+        :initial="{ opacity: 0, x: 500, rotate: 90 }"
+        :visibleOnce="{
+          opacity: 1,
+          x: 0,
+          rotate: 0,
+          transition: {
+            type: 'spring',
+            stiffness: 200,
+            damping: 30,
+            mass: 0.3,
+          },
+        }"
+        :delay="200"
+      />
     </div>
   </div>
 </template>

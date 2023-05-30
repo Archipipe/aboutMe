@@ -3,10 +3,39 @@
     <div class="header">
       <div class="headerLogo"><span>Зимин</span><span>Игнат</span></div>
       <nav class="headerNav">
-        <button>Обо мне</button>
-        <button>Почему я?</button>
-        <button>Ученики</button>
-        <button>Контакты</button>
+        <a
+          href="#About"
+          v-smooth-scroll="{
+            duration: 1000,
+            offset: -50,
+          }"
+        >
+          Обо мне
+        </a>
+        <a
+          href="#Whyme"
+          v-smooth-scroll="{
+            duration: 1000,
+            offset: -50,
+          }"
+          >Почему я?</a
+        >
+        <a
+          href="#Reviews"
+          v-smooth-scroll="{
+            duration: 1000,
+            offset: -50,
+          }"
+          >Ученики</a
+        >
+        <a
+          href="#Contact"
+          v-smooth-scroll="{
+            duration: 1000,
+            offset: -50,
+          }"
+          >Контакты</a
+        >
       </nav>
       <div class="headerContacts">
         <div><img :src="phoneIcon" /><span>8-800-555-35-35</span></div>
@@ -64,7 +93,8 @@ header {
   display: flex;
   width: 40%;
   justify-content: space-between;
-  button {
+  a {
+    text-decoration: none;
     cursor: pointer;
     font-family: inherit;
     font-size: 18px;

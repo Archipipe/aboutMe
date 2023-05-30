@@ -1,5 +1,20 @@
 <template>
-  <div class="Signup">
+  <div
+    id="Contact"
+    class="Signup"
+    v-motion
+    :initial="{ opacity: 0, y: 200 }"
+    :visibleOnce="{
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: 'spring',
+        stiffness: 250,
+        damping: 25,
+        mass: 0.7,
+      },
+    }"
+  >
     <div class="inner">
       <div>
         <div>
