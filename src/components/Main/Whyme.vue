@@ -1,5 +1,5 @@
 <template>
-  <div class="Whyme" id="Whyme">
+  <div id="Whyme">
     <div class="left">
       <div>Почему тебе стоит выбрать меня?</div>
 
@@ -7,7 +7,7 @@
         <li>
           <span
             v-motion
-            :initial="{ opacity: 0, x: -500, rotate: 90 }"
+            :initial="{ opacity: 0, x: -300, rotate: 90 }"
             :visibleOnce="{
               opacity: 1,
               x: 0,
@@ -27,7 +27,7 @@
         <li>
           <span
             v-motion
-            :initial="{ opacity: 0, x: -500, rotate: 90 }"
+            :initial="{ opacity: 0, x: -300, rotate: 90 }"
             :visibleOnce="{
               opacity: 1,
               x: 0,
@@ -46,7 +46,7 @@
         <li>
           <span
             v-motion
-            :initial="{ opacity: 0, x: -500, rotate: 90 }"
+            :initial="{ opacity: 0, x: -300, rotate: 90 }"
             :visibleOnce="{
               opacity: 1,
               x: 0,
@@ -69,7 +69,7 @@
         <li>
           <span
             v-motion
-            :initial="{ opacity: 0, x: -500, rotate: 90 }"
+            :initial="{ opacity: 0, x: -300, rotate: 90 }"
             :visibleOnce="{
               opacity: 1,
               x: 0,
@@ -129,7 +129,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.Whyme {
+#Whyme {
   width: 100%;
   display: flex;
   justify-content: center;

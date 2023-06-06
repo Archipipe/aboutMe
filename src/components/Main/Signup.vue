@@ -91,9 +91,9 @@ import { ref, reactive, computed } from "vue";
 import useVuelidate from "@vuelidate/core";
 import { required, email } from "@vuelidate/validators";
 
-import skypeIcon from "../SocialComponents/skypeIcon.vue";
-import telegramIcon from "../SocialComponents/telegramIcon.vue";
-import vkIcon from "../SocialComponents/vkIcon.vue";
+import skypeIcon from "./SocialComponents/skypeIcon.vue";
+import telegramIcon from "./SocialComponents/telegramIcon.vue";
+import vkIcon from "./SocialComponents/vkIcon.vue";
 
 import emailjs from "@emailjs/browser";
 

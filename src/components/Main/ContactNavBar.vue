@@ -45,17 +45,9 @@
   </header>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from "vue";
+<script lang="ts" setup>
 import phoneIcon from "@/assets/SocialImages/phone_icon.svg";
 import mailIcon from "@/assets/SocialImages/mail_icon.svg";
-
-export default defineComponent({
-  name: "ContactNavBar",
-  setup() {
-    return { phoneIcon, mailIcon };
-  },
-});
 </script>
 
 <style lang="scss" scoped>

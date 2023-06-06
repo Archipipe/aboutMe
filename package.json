@@ -16,6 +16,7 @@
     "emailjs-com": "^3.2.0",
     "swiper": "^9.3.2",
     "vue": "^3.2.13",
+    "vue-router": "^4.2.2",
     "vue3-smooth-scroll": "^0.8.1"
   },
   "devDependencies": {

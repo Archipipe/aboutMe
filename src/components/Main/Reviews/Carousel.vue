@@ -1,15 +1,19 @@
 <template>
   <swiper
-    :navigation="true"
     @swiper="onSwiper"
     :modules="modules"
-    :slidesPerView="3"
-    :spaceBetween="30"
     :loop="true"
+    :slidesPerView="4"
+    :spaceBetween="30"
+    :autoplay="{
+      delay: 2500,
+      disableOnInteraction: true,
+    }"
     class="mySwiper"
   >
-    <swiper-slide>Slide 1</swiper-slide>
-    <swiper-slide>Slide 2</swiper-slide><swiper-slide>Slide 3</swiper-slide>
+    <swiper-slide class="slideElement" v-for="(slide, idx) in SlideArray"
+      ><Slide :title="slide.title" :image="slide.image" :key="idx"
+    /></swiper-slide>
   </swiper>
   <div class="SliderButton">
     <sliderLeft @click="slide('prev')" />
@@ -20,18 +24,32 @@
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/navigation";
-import sliderLeft from "@/components/Reviews/sliderLeft.vue";
-import sliderRight from "@/components/Reviews/sliderRight.vue";
-import { ref } from "vue";
+import sliderLeft from "./sliderLeft.vue";
+import sliderRight from "./sliderRight.vue";
+import { defineProps, PropType, ref, reactive } from "vue";
+import Slide from "./CarouselSlide.vue";
 
-import { Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 
-const modules = [Navigation];
+const modules = [Navigation, Autoplay];
 
+interface ISlide {
+  title: string;
+  image: string;
+  id: number;
+}
+
+const props = defineProps({
+  data: {
+    type: Array as PropType<ISlide[]>,
+    required: true,
+  },
+});
+
+let SlideArray = reactive(props.data);
 const swiperRef = ref();
 const onSwiper = (swiper: any) => {
   swiperRef.value = swiper;
-  console.log(swiperRef.value);
 };
 
 const slide = (dir: "prev" | "next") => {

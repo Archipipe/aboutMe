@@ -6,7 +6,15 @@
         <h2>Зимин Игнат</h2>
         <span>Репетитор Егэ по информатике</span>
       </div>
-      <button>Оставить заявку</button>
+      <a
+        href="#Contact"
+        v-smooth-scroll="{
+          duration: 1000,
+          offset: -50,
+        }"
+      >
+        Оставить заявку
+      </a>
     </div>
     <div class="right">
       Подготовлю к ЕГЭ/ОГЭ по информатике. Обучу языку программирования
@@ -43,14 +51,19 @@ export default defineComponent({
 .left {
   font-size: 18px;
 
+  & > div {
+    margin-bottom: 10%;
+  }
+
   h2 {
     transform: translate(0, -5%);
     font-size: 40px;
     font-weight: normal;
   }
 
-  button {
-    margin-top: 10%;
+  a {
+    color: $font_default;
+    text-decoration: none;
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     font-size: 14px;

@@ -22,10 +22,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
-import vkIcon from "@/components/SocialComponents/vkIcon.vue";
-import telegramIcon from "@/components/SocialComponents/telegramIcon.vue";
-import skypeIcon from "@/components/SocialComponents/skypeIcon.vue";
+import { defineComponent } from "vue";
+import vkIcon from "./SocialComponents/vkIcon.vue";
+import telegramIcon from "./SocialComponents/telegramIcon.vue";
+import skypeIcon from "./SocialComponents/skypeIcon.vue";
 import photoPlaceholder from "@/assets/SocialImages/photoPlaceholder.svg";
 import myself from "@/assets/SocialImages/Myself.png";
 
